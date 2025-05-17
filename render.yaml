@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: embedding-api
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn embedding_server:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: FLASK_ENV
+        value: production

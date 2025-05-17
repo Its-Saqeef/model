@@ -1,0 +1,4 @@
+flask
+Pillow
+sentence-transformers
+gunicorn
