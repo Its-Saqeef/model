@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: embedding-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn main:app -k uvicorn.workers.UvicornWorker"
+    plan: free
